@@ -30,16 +30,16 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a id="id1" class="nav-link" href="#" onclick="hfun()">Home </a>
+              <a id="id1" class="nav-link" href="#" onclick="homefunction()">Home </a>
             </li>
             <li class="nav-item">
-              <a id="id2" class="nav-link" href="#" onclick="cfun()">Contact</a>
+              <a id="id2" class="nav-link" href="#" onclick="contactfunction()">Contact</a>
             </li>
             <li class="nav-item">
-              <a id="id3" class="nav-link" href="#" onclick="afun()">About</span></a>
+              <a id="id3" class="nav-link" href="#" onclick="aboutfunction()">About</span></a>
             </li>
             <li class="nav-item">
-              <a id="id4" class="nav-link" href="#" onclick="sfun()">Services</span></a>
+              <a id="id4" class="nav-link" href="#" onclick="servicesfunction()">Services</span></a>
             </li>
             
           </ul>
@@ -51,16 +51,16 @@
         </div>
     </nav>
     <script>
-        function hfun(){
+        function homefunction(){
           document.getElementById("did").innerHTML="I am in Home now";
         }
-        function cfun(){
+        function contactfunction(){
           document.getElementById("did").innerHTML="I am in Contact now";
         }
-        function afun(){
+        function aboutfunction(){
           document.getElementById("did").innerHTML="I am in About now";
         }
-        function sfun(){
+        function servicesfunction(){
           document.getElementById("did").innerHTML="I am in Services now";
         }
       </script>
