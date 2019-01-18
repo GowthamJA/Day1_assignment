@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Image rotation</title>
+        <style>
+            /* #img{
+                border: 2px solid blue;
+                /* margin: auto;    */
+            } */
+        </style>
+        <script>
+            function init(){
+                var ref = document.getElementById("img");
+                document.addEventListener("keyup",game);
+            }
+            function game(){
+                console.log(event.keyCode);
+                if(event.keyCode==37){
+                    document.getElementById("img").style.margin="500px 0px 0px 0px";
+                }
+                if(event.keyCode==38){
+                    document.getElementById("img").style.margin="0px 0px 500px 0px";
+                }
+                if(event.keyCode==39){
+                    document.getElementById("img").style.margin="0px 0px 0px 500px";   
+                }
+                if(event.keyCode==40){
+                    document.getElementById("img").style.margin="500px 0px 0px 0px";
+                }
+                if(event.keyCode==82)
+                {
+                    var ref =  document.getElementById('img');
+                    var x = 10;
+                    var y = 10;
+                    var ang = 10;
+                    var intervalVal = setInterval(function(){
+                        x=x+10;
+                        y=y+10;
+                        ang=ang+20;
+                        ref.style = "transform: translate("+x+'px'+','+y+'px);transform: rotate( "+ang+"deg)';
+                        ref.style ="transform: rotate("+ang+"deg)";
+                    },300)
+                    setTimeout(function(){
+                        clearInterval(intervalVal);
+                    },19000)
+                }
+                if(event.keyCode==83)
+                {
+                    var ref =  document.getElementById('img');
+                    var x = 0;
+                    var y = 0;
+                    var ang =0;
+                    var intervalVal = setInterval(function(){
+                        // x=x+10;
+                        // y=y+10;
+                        // ang=ang+20;
+                        ref.style = "transform: translate("+x+'px'+','+y+'px);transform: rotate( "+ang+"deg)';
+                        ref.style ="transform: rotate("+ang+"deg)";
+                    },300)
+                    setTimeout(function(){
+                        clearInterval(intervalVal);
+                    },19000)
+                }
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <img id="img" src="images.jpeg">
+    </body>
+</html>
