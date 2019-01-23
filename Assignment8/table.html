@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CREATION OF TABLE </title>
+	<style>
+		input{
+			display: block;
+		}
+	</style>
+	<script>
+	    function appendRow(){
+			var roww = document.createElement("tr");
+			for(var i=0;i<2;i++)
+			{
+				var tda = document.createElement("td");
+				var data = document.createTextNode(document.getElementById("myform").elements[i].value);
+				tda.appendChild(data);
+				roww.appendChild(tda);
+			
+			}
+			var tda = document.createElement("td");
+			var t = document.createElement("input");
+			t.setAttribute('type','button');
+			t.setAttribute('value','delete');
+			t.setAttribute('onclick','del(this)');
+			tda.appendChild(t);
+			roww.appendChild(tda);
+			document.getElementById("tabid").appendChild(roww);
+		}
+		function del(dell){
+			var rdel = dell.parentNode.parentNode;
+			document.getElementById("tabid").removeChild(rdel);
+		}
+	</script>
+</head>
+<body>
+	<form id ="myform" method="post">
+		Name:<input type="text" id="name"  required>
+		Native:<input type="text" id="native"  required>
+		<input type="button" onclick = "appendRow()" value="submit">
+	</form>
+	<table id="tabid" border="2">
+		<tr>
+			<td>GOWTHAM</td>
+			<td>BELLARY</td>
+			<td>DELETE</td>
+		</tr>
+	</table>
+</body>
+</html>
